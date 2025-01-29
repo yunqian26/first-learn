@@ -2,7 +2,6 @@ import numpy as py
 import pandas as pd
 import matplotlib as pl
 import matplotlib.pyplot as plt
-from pylsp.plugins.pylint_lint import build_args_stdio
 if __name__== '__main__':
     test=pd.read_csv('D:\\anaconda3\\Lib\\site-packages\\test.csv')
     test=test.drop(columns=['Fare'],axis=1)# 删除两行无用行
@@ -32,4 +31,9 @@ if __name__== '__main__':
     plt.title=('Survival Number by Age on Titanic')
     plt.xlabel('Age')
     plt.ylabel('Survival Number')
+    plt.show()
+    #船舱与存活率
+    survival_rates_pclass=test.groupby('Pclass')['Survived'].sum()
+    survival_rates_pclass.plot(autopct='%1.f%%',kind='pie',color=['m','g','b'])#autopct参数可显示各数据具体数值
+    plt.title=('Survival rate by Pclass on Titanic')
     plt.show()
