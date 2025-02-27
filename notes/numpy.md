@@ -7,7 +7,7 @@
 >数组的属性：
 >`ndarray.ndim`：数组的维度数量或轴的数量
 >`ndarray.shape`：数组的维度，在每个轴上的大小。对于二维数组表示其行数和列数
->`ndarray.size`：数组中元素总个数，等于ndarray.shape中各个轴上大小乘积
+>`ndarray.size`：数组中元素总个数，等于`ndarray.shape`中各个轴上大小乘积
 >`ndarray.dtype`：元素的数据类型
 >`ndarray.itemsize`：每个元素的大小，以字节为单位、
 >`ndarray.flags`：有关内存布局，为C（行优先）还是F（列优先）存储
@@ -16,7 +16,7 @@
 
 ##### 创建数组
 * `numpy.empty(shape([列，行]),dtype=(数据类型),order=('C'或'F'))`可用来创建一个指定形状、数据类型且未初始化的数组，若将empty更换为zeros(ones)就是创建一个数组元素用0(1)来填充的数组· 
-* `numpy.array([],[],...)`可用来创建一个指定数组，以中括号为行数，中括号内数字个数为列数，也可用.shape/.reshape函数重构数组
+* `numpy.array([],[],...)`可用来创建一个指定数组，以中括号为行数，中括号内数字个数为列数，也可用`.shape`/`.reshape`函数重构数组
 * `numpy.ones_likes(数组名(arr))`可用于创建一个与arr相同形状，但是元素全为一的数组
 * `numpy.asarray(输入参数a,数据类型dtype=None(可选),存储方式order=None(可选))`可用于从已有数据创建数组，a可以是任意形式的输入参数，列表、列表的元组、元组、元组的元组、元组的列表、多维数组均可
 * `numpy.frombuffer(buffer(以流的形式读入),dtype=float,读取数据量(默认为-1，即读取所有数据)count=-1,起始位置offset=0)`可以用于实现动态数组，若buffer是字符串，则需要在buffer前加一个`b`用于识别
@@ -32,7 +32,6 @@
 >也可使用布尔索引（例如比较运算符，异或运算符）来获取符合指定条件的元素
 
 ##### 广播
-
 
 
 
