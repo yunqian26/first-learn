@@ -1,10 +1,5 @@
-a=1
-b=2#初始化
-num=20#累加项数
-sum=b/a#相加第一项
-for i in range(a,num):#循环
-    c=b
-    b=a+b
-    a=c
-    sum+=b/a#相加通式
-print(sum)
+count=0
+for i in range(1000):
+    if i % 5 != 0 and i % 6 != 0 and i % 8 != 0:
+        count=count+1
+print(count)
